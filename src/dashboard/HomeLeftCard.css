@@ -3,6 +3,9 @@
 	flex-direction: column;
 	align-items: start;
 	margin-left: 20px;
+	/* background-color: #edf5fe; */
+	border: 1px solid #edf5fe;
+	height: 100%;
 }
 
 .cardDiv {
@@ -31,4 +34,7 @@
 	font-size: 18px;
 	line-height: 24px;
 	color: #707070;
+}
+.logoutcard {
+	margin-top: 250px;
 }

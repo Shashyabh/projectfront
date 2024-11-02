@@ -6,6 +6,7 @@ import analytics from "../images/analytics.png";
 import settings from "../images/settings.png";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../services/UserServices";
+import { IoLogOutOutline } from "react-icons/io5";
 
 const HomeLeftCard = () => {
 	const navigate = useNavigate();
@@ -65,9 +66,9 @@ const HomeLeftCard = () => {
 				<img src={settings} alt="" />
 				<p>Settings</p>
 			</div>
-			<div className="cardDiv" style={getCardStyle("logout")} onClick={handleLogout}>
-				<img src={settings} alt="" />
-				<p>Logout</p>
+			<div className="cardDiv logoutcard" style={getCardStyle("logout")} onClick={handleLogout}>
+				<IoLogOutOutline style={{ fontSize: "40px", color: "#CF3636" }} />
+				<p style={{ color: "#CF3636" }}>Logout</p>
 			</div>
 		</div>
 	);

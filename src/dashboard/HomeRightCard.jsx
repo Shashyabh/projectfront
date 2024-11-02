@@ -11,7 +11,7 @@ const HomeRightCard = ({ title, data }) => {
 	};
 
 	// Log the data properly
-	console.log("data====>", data);
+	//console.log("data====>", data);
 
 	return (
 		<div className="homeCardMain">
@@ -28,7 +28,8 @@ const HomeRightCard = ({ title, data }) => {
 			</div>
 			{show && <InputCard show={show} />}
 			<div className="homeCardLower">
-				{data && data.map((task) => <HeroSectionCard key={task._id} task={task} />)}
+				{data &&
+					data?.map((task) => <HeroSectionCard key={task._id} task={task} title={title} />)}
 			</div>
 		</div>
 	);

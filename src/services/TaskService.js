@@ -43,6 +43,31 @@ export const getTaskByType = async (type) => {
 	}
 };
 
+export const editTaskStatus = async (status, taskId) => {
+	//console.log(status + " ====" + taskId);
+	try {
+		const userData = JSON.parse(localStorage.getItem("userData"));
+		const token = userData?.token;
+
+		const response = await axios.put(
+			`${BASE_URL}/task/updateTasksStatus/${taskId}`,
+			{
+				status,
+			},
+
+			{
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+			}
+		);
+		console.log("responsedataaaaaaaa:", response.data);
+		return response.data;
+	} catch (error) {
+		console.error("Error fetching tasks:", error);
+	}
+};
+
 export const getAllTask = async () => {
 	try {
 		const userData = JSON.parse(localStorage.getItem("userData"));
