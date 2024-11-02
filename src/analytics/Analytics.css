@@ -1,0 +1,50 @@
+.analyticsDiv {
+	margin-left: 60px;
+	margin-top: 40px;
+}
+.analyticsMainDiv {
+	display: flex;
+	justify-content: center;
+	border-radius: 15px;
+	margin-top: 40px;
+}
+span {
+	color: #000000;
+	margin-left: 50px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
+	position: relative;
+}
+.analyticsTask,
+.analyticsPriority {
+	padding: 15px;
+	margin: 20px;
+	background-color: #f9fcff;
+	width: 360px;
+	height: 180px;
+}
+td {
+	text-align: left;
+	color: #000000;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+}
+.circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #90c4cc; /* Change color as needed */
+	margin-right: 10px; /* Space between circle and text */
+}
+.leftAlign {
+	text-align: left;
+}
+
+.rightAlign {
+	text-align: right;
+	width: 60%; /* Optional: ensures the right column takes up space */
+}

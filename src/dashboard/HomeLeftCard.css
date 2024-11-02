@@ -1,0 +1,34 @@
+.cardMainDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	margin-left: 20px;
+}
+
+.cardDiv {
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.cardDiv img {
+	width: 40px;
+	height: 40px;
+}
+/* .pro {
+	color: #000000;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+} */
+
+.cardDiv p {
+	margin-left: 30px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #707070;
+}

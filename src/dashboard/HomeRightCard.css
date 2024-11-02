@@ -1,0 +1,39 @@
+.homeCardMain {
+	width: 340px;
+	margin-left: 15px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	height: 480px;
+	background-color: #eef2f5;
+	overflow-y: auto;
+	white-space: nowrap;
+	border-radius: 10px;
+}
+.homeCardMain::-webkit-scrollbar {
+	height: 10px;
+	background-color: #9cb7c5;
+	border-radius: 3px;
+	width: 5px;
+}
+.homeCardUpper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.homeCardUpper p {
+	color: #000000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	/* font-size: 14px; */
+	line-height: 12px;
+}
+.homeCardUpperInner {
+	width: 80px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.plusIcon {
+	font-size: 20px;
+	cursor: pointer;
+}

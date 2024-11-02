@@ -1,0 +1,32 @@
+.heroSectionCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	/* align-items: center; */
+}
+.heroSectionCardInner {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	border: 1px solid #e2e2e2;
+	height: 30px;
+	padding: 2px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	border-radius: 10px;
+}
+.heroSectionCardInner input {
+	border: 2px solid #e2e2e2;
+	width: 15px;
+	height: 18px;
+	border-radius: 8px;
+}
+.heroSectionCardInner span {
+	margin-left: 30px;
+	color: #000000;
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 12px;
+}

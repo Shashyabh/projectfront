@@ -1,0 +1,100 @@
+.mainCard {
+	background-color: #ffffff;
+	width: 330px;
+	height: 300px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+
+.priority {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #707070;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 10px;
+	padding: 10px;
+	line-height: 12px;
+}
+
+.priorityLabel {
+	display: flex;
+	align-items: center;
+}
+
+.priorityIndicator {
+	background-color: red;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.heroSectionTitle {
+	margin-left: 44px;
+	font-family: "Poppins", serif;
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 25px;
+	color: #000000;
+}
+
+.checklist {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-family: "Inter", serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 25px;
+	color: #000000;
+}
+.checklistPop {
+	text-align: center;
+	background-color: #eeecec;
+	width: 15px;
+	height: 20px;
+}
+
+.heroSectionData {
+	height: 110px;
+	overflow-y: auto;
+	white-space: nowrap;
+	margin-left: 44px;
+}
+
+.statusDiv {
+	display: flex;
+	justify-content: space-around;
+}
+
+.statusDivInner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.statusDiv > p {
+	border-radius: 10px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 10px;
+	padding: 10px;
+	line-height: 12px;
+	color: #ffffff;
+	margin-left: 5px;
+}
+
+.statusProgress,
+.statusToDo,
+.statusDone {
+	background-color: #eeecec;
+	border-radius: 10px;
+	color: #767575;
+	margin-left: 5px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 10px;
+	padding: 10px;
+	line-height: 12px;
+}

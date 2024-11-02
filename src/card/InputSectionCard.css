@@ -1,0 +1,33 @@
+.inputSectionCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.inputSectionCardInner {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	border: 1px solid #e2e2e2;
+	height: 30px;
+	padding: 2px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	border-radius: 10px;
+}
+.innerCheckbox {
+	border: 2px solid #e2e2e2;
+	width: 15px;
+	height: 18px;
+	border-radius: 8px;
+}
+.innerText {
+	margin-left: 30px;
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 12px;
+	width: 557px;
+	height: 100%;
+	border: none;
+}

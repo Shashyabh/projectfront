@@ -1,0 +1,9 @@
+.main {
+	background-color: #ffffff;
+	display: flex;
+}
+
+.leftDiv {
+	width: 20%;
+	height: 100%;
+}
