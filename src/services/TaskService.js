@@ -42,3 +42,20 @@ export const getTaskByType = async (type) => {
 		console.error("Error fetching tasks:", error);
 	}
 };
+
+export const getAllTask = async () => {
+	try {
+		const userData = JSON.parse(localStorage.getItem("userData"));
+		const token = userData?.token;
+
+		const response = await axios.get(`${BASE_URL}/task/getTasks`, {
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		});
+		// console.log(response.data)
+		return response.data;
+	} catch (error) {
+		console.error("Error fetching tasks:", error);
+	}
+};
