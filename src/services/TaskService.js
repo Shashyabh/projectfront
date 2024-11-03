@@ -76,3 +76,11 @@ export const getAllTask = async () => {
 		console.error("Error fetching tasks:", error);
 	}
 };
+export const deleteTaskById = async (id) => {
+	try {
+		const response = await axios.delete(`${BASE_URL}/task/deleteTask/${id}`);
+		return response.data;
+	} catch (error) {
+		console.error("Error deleting task:", error);
+	}
+};

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./DeleteCard.css";
-import { deleteTaskById } from "../services/TaskService";
+
 import { useNavigate } from "react-router-dom";
+import { deleteTaskById } from "../services/TaskService";
 const DeleteCard = ({ clicked, id }) => {
 	const [isPopupOpenn, setIsPopupOpenn] = useState(clicked);
 	const navigate = useNavigate();
