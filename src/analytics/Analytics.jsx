@@ -6,7 +6,7 @@ const Analytics = () => {
 		<>
 			<div className="analyticsDiv">
 				<div>
-					<span>Analytics</span>
+					<span className="spanAna">Analytics</span>
 				</div>
 				<div className="analyticsMainDiv">
 					<div className="analyticsTask">

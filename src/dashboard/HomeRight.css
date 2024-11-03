@@ -3,13 +3,14 @@
 	height: 100%;
 }
 .HomeCardUp {
-	height: 125px;
+	height: 150px;
 }
 .homeCardWelcome {
-	margin-top: 10px;
+	/* margin-top: 10px; */
 	display: flex;
-	justify-content: start;
+	justify-content: space-between;
 	align-items: center;
+	margin-left: 50px;
 }
 .homeCardWelcomeDiv {
 	color: #000000;
@@ -22,14 +23,22 @@
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
 	font-size: 12px;
-	margin-left: 670px;
+	/* margin-left: 770px;
+	width: 200px; */
+	/* display: flex;
+	justify-content: end;
+	align-self: center; */
+}
+
+.selectDropdown {
+	margin-left: 800px;
 }
 
 .homeCardBoard {
 	display: flex;
 	align-items: center;
-	justify-content: start;
-	margin-top: 10px;
+	justify-content: space-between;
+	/* margin-top: 10px; */
 }
 .homeCardBoard p {
 	color: #707070;
@@ -49,6 +58,7 @@
 	font-weight: 500;
 	font-size: 22px;
 	line-height: 45px;
+	margin-left: 50px;
 }
 .homeCardBoardInner span {
 	margin-left: 10px;

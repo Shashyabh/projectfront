@@ -5,6 +5,7 @@ import InputDataCard from "./InputDataCard";
 import { getMembersByUsers } from "../services/UserServices";
 import AssignCard from "./AssignCard";
 import { createTask } from "../services/TaskService";
+import { MdDelete } from "react-icons/md";
 
 const InputCard = ({ show }) => {
 	const [formData, setFormData] = useState({
@@ -48,12 +49,9 @@ const InputCard = ({ show }) => {
 			};
 
 			await createTask(data);
-			// console.log("newData: " + newData);
-			//if (!newData.status) throw new Error(newData.msg);
-
 			closePopup();
 		} catch (error) {
-			console.log(error.message); // Replace with a proper UI message
+			console.log(error.message);
 		}
 	};
 
@@ -118,7 +116,7 @@ const InputCard = ({ show }) => {
 			{isPopupOpen && (
 				<form className="popupOverlay" onClick={handleOverlayClick} onSubmit={handleSubmit}>
 					<div className="popupContent">
-						<span className="popupHeading">Task Details</span>
+						<span className="popupHeading">Title</span>
 						<div>
 							<input
 								className="groupNameInput"
@@ -130,6 +128,7 @@ const InputCard = ({ show }) => {
 								required
 							/>
 						</div>
+
 						<div className="priorityTask">
 							<p>Select Priority</p>
 							<div className="radioInput">
@@ -142,8 +141,10 @@ const InputCard = ({ show }) => {
 									onChange={handleInputChange}
 								/>
 								<label htmlFor="radio-high" className="label">
+									<p className="pHigh"></p>
 									HIGH PRIORITY
 								</label>
+
 								<input
 									type="radio"
 									name="priority"
@@ -153,8 +154,10 @@ const InputCard = ({ show }) => {
 									onChange={handleInputChange}
 								/>
 								<label htmlFor="radio-moderate" className="label">
+									<p className="pMod"></p>
 									MODERATE PRIORITY
 								</label>
+
 								<input
 									type="radio"
 									name="priority"
@@ -164,6 +167,7 @@ const InputCard = ({ show }) => {
 									onChange={handleInputChange}
 								/>
 								<label htmlFor="radio-low" className="label">
+									<p className="pLow"></p>
 									LOW PRIORITY
 								</label>
 							</div>
@@ -189,7 +193,9 @@ const InputCard = ({ show }) => {
 						</div>
 
 						<div>
-							<p>Checklist ({formData.checkLists.length}/0)</p>
+							<p className="checklistTitle">
+								Checklist ({formData.checkLists.length}/{formData.checkLists.length})
+							</p>
 							{formData.checkLists.length > 0 && (
 								<InputDataCard tasks={formData.checkLists} />
 							)}
@@ -208,6 +214,7 @@ const InputCard = ({ show }) => {
 											value={formData.newTask.text}
 											onChange={handleTextChange}
 										/>
+										<MdDelete className="deleteIconBtn" />
 									</div>
 								</div>
 							)}

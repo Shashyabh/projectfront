@@ -63,8 +63,8 @@ const HomeRight = () => {
 		<div className="rightDiv">
 			<div className="HomeCardUp">
 				<div className="homeCardWelcome">
-					<span className="homeCardWelcomeDiv">Welcome {user?.name}</span>
-					<span className="homeCardWelcomeDate">{formatCurrentDate()}</span>
+					<p className="homeCardWelcomeDiv">Welcome! {user?.name}</p>
+					<p className="homeCardWelcomeDate">{formatCurrentDate()}</p>
 				</div>
 				<div className="homeCardBoard">
 					<div className="homeCardBoardInner">
@@ -73,7 +73,14 @@ const HomeRight = () => {
 
 						<span onClick={handleAddPeople}>Add_People</span>
 					</div>
-					<p style={{ marginLeft: "745px" }}>This_Week</p>
+					<select className="selectDropdown">
+						<option value="volvo" selected>
+							Today
+						</option>
+						<option value="saab">This Week</option>
+						<option value="mercedes">This Month</option>
+					</select>
+					{/* <p >This_Week</p> */}
 				</div>
 			</div>
 			<div className="homeCardDown">

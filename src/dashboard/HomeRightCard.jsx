@@ -10,6 +10,12 @@ const HomeRightCard = ({ title, data }) => {
 		setShow(!show);
 	};
 
+	const [clicked, setClicked] = useState(true);
+
+	const handleOnClickCollapse = () => {
+		setClicked(!clicked);
+	};
+
 	// Log the data properly
 	//console.log("data====>", data);
 
@@ -23,14 +29,21 @@ const HomeRightCard = ({ title, data }) => {
 							+
 						</p>
 					)}
-					<img src={collapse} alt="" />
+					<img
+						style={{ cursor: "pointer" }}
+						onClick={handleOnClickCollapse}
+						src={collapse}
+						alt=""
+					/>
 				</div>
 			</div>
 			{show && <InputCard show={show} />}
-			<div className="homeCardLower">
-				{data &&
-					data?.map((task) => <HeroSectionCard key={task._id} task={task} title={title} />)}
-			</div>
+			{clicked && (
+				<div className="homeCardLower">
+					{data &&
+						data?.map((task) => <HeroSectionCard key={task._id} task={task} title={title} />)}
+				</div>
+			)}
 		</div>
 	);
 };
