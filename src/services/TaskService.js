@@ -70,16 +70,8 @@ export const editTaskStatus = async (status, taskId) => {
 
 export const getAllTask = async () => {
 	try {
-		const userData = JSON.parse(localStorage.getItem("userData"));
-		const token = userData?.token;
-
-		const response = await axios.get(`${BASE_URL}/task/getTasks`, {
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		});
-		// console.log(response.data)
-		return response.data;
+		const response = await axios.get(`${BASE_URL}/task/getAllTasks`);
+		return response.data.data;
 	} catch (error) {
 		console.error("Error fetching tasks:", error);
 	}
