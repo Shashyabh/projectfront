@@ -10,10 +10,10 @@ function formatDateString(dateString) {
 	const options = { day: "2-digit", month: "short" };
 	return date.toLocaleDateString("en-GB", options);
 }
-const HeroSectionCard = ({ task, title }) => {
-	//console.log("task======>", task);
 
+const HeroSectionCard = ({ task, title }) => {
 	const [cardShow, setCardShow] = useState(false);
+	const [clickedCollapse, setClickedCollapse] = useState(true);
 	const date = formatDateString(task.dueDate);
 
 	const priority = task.priority;
@@ -39,6 +39,17 @@ const HeroSectionCard = ({ task, title }) => {
 		setCardShow(!cardShow);
 	};
 
+	const handleCollpaseCheckList = () => {
+		setClickedCollapse(!clickedCollapse);
+	};
+	//console.log("task======>", task);
+	const totalChecked = task.checkLists.reduce((total, list) => {
+		return total + list.filter((item) => item.checked).length;
+	}, 0);
+
+	const totalChecklistItems = task.checkLists.reduce((total, list) => {
+		return total + list.length; // Add the length of each sub-array
+	}, 0);
 	return (
 		<div className="mainCard">
 			<div className="priority">
@@ -57,20 +68,26 @@ const HeroSectionCard = ({ task, title }) => {
 					{priority === "low" && <p>LOW PRIORITY</p>}
 				</div>
 				<img className="dotclickclass" onClick={dotClickHandler} src={dots} alt="dots" />
-				{cardShow && (
-					<div className="dotclasscard">
-						<EditDeleteCard />
-					</div>
-				)}
 			</div>
-			<span className="heroSectionTitle">Hero Section</span>
+			{cardShow && (
+				<div className="dotclasscard">
+					<EditDeleteCard task={task} />
+				</div>
+			)}
+			<span className="heroSectionTitle">{task.title}</span>
 			<div className="checklist">
-				<p>Checklist (0/3)</p>
-				<p className="checklistPop">^</p>
+				<p>
+					Checklist ({totalChecked}/{totalChecklistItems})
+				</p>
+				<p onClick={handleCollpaseCheckList} className="checklistPop">
+					^
+				</p>
 			</div>
-			<div className="heroSectionData">
-				<HeroSectionCardData checklist={task.checkLists} />
-			</div>
+			{clickedCollapse && (
+				<div className="heroSectionData">
+					<HeroSectionCardData checklist={task.checkLists} />
+				</div>
+			)}
 			<div className="statusDiv">
 				<p
 					style={{

@@ -1,7 +1,7 @@
 .mainCard {
 	background-color: #ffffff;
 	width: 330px;
-	height: 300px;
+	height: 100%;
 	margin-top: 5px;
 	border-radius: 10px;
 	position: relative;
@@ -83,6 +83,7 @@
 	background-color: #eeecec;
 	width: 15px;
 	height: 20px;
+	cursor: pointer;
 }
 
 .heroSectionData {

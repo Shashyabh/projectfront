@@ -1,0 +1,62 @@
+.popupOverl {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.76);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.popupCont {
+	background: white;
+	width: 250px;
+	height: 140px;
+	padding: 30px;
+	padding-left: 50px;
+	border-radius: 10.91px;
+}
+
+.deleteSpan {
+	color: #000000;
+	font-family: "Noto Sans";
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.btnContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.btnCancel {
+	margin-top: 20px;
+	width: 300px;
+	height: 40px;
+	background-color: #17a2b8;
+	border-radius: 15px;
+	font-family: "Poppins";
+	font-size: 15px;
+	font-weight: 600;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+}
+.btnDelete {
+	margin-top: 10px;
+	width: 300px;
+	height: 40px;
+	border-radius: 15px;
+	font-family: "Poppins";
+	background-color: white;
+	font-size: 15px;
+	font-weight: 600;
+	border: 2px solid #cf3636;
+	color: #cf3636;
+	cursor: pointer;
+}
